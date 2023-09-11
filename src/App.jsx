@@ -7,7 +7,7 @@ const Login = lazy(() => import("./pages/auth/login"));
 const Register = lazy(() => import("./pages/auth/register"));
 
 const Dashboard = lazy(() => import("./pages/dashboard"));
-const Ecommerce = lazy(() => import("./pages/ecommerce"));
+const Profile = lazy(() => import("./pages/utility/profile"));
 
 import AuthLayout from "./layout/AuthLayout";
 import Layout from "./layout/Layout";
@@ -24,7 +24,7 @@ function App() {
         {/* dashboard layout use  */}
         <Route path="/*" element={<Layout />}>
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="ecommerce" element={<Ecommerce />} />
+          <Route path="dashboard/profile" element={<Profile />} />
         </Route>
       </Routes>
     </main>
