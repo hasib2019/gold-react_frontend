@@ -8,6 +8,7 @@ const Register = lazy(() => import("./pages/auth/register"));
 
 const Dashboard = lazy(() => import("./pages/dashboard"));
 const Profile = lazy(() => import("./pages/utility/profile"));
+const AllProduct = lazy(() => import("./pages/product/all-product"));
 
 import AuthLayout from "./layout/AuthLayout";
 import Layout from "./layout/Layout";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/*" element={<Layout />}>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="dashboard/profile" element={<Profile />} />
+          <Route path="dashboard/all-product" element={<AllProduct />} />
         </Route>
       </Routes>
     </main>

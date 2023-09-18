@@ -10,6 +10,11 @@ export const menuItems = [
     link: "dashboard",
   },
   {
+    title: "All Product",
+    icon: "heroicons-outline:shopping-cart", 
+    link: "dashboard/all-product",
+  },
+  {
     title: "Multi Level",
     icon: "heroicons:share",
     link: "#",

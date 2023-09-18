@@ -3,3 +3,4 @@ const liveIp = 'http://localhost:8000/api/';
 
 export const loginApi = liveIp + 'login';
 export const registerApi = liveIp + 'users';
+export const productApi = liveIp+'product'
