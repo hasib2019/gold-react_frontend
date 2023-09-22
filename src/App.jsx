@@ -9,6 +9,9 @@ const Register = lazy(() => import("./pages/auth/register"));
 const Dashboard = lazy(() => import("./pages/dashboard"));
 const Profile = lazy(() => import("./pages/utility/profile"));
 const AllProduct = lazy(() => import("./pages/product/all-product"));
+const OrderShow = lazy(() => import("./pages/order/show"));
+const HistoricalData = lazy(() => import("./pages/historical-data/show"));
+const ShowSetAlartData = lazy(() => import("./pages/set-alart/show"));
 
 import AuthLayout from "./layout/AuthLayout";
 import Layout from "./layout/Layout";
@@ -27,6 +30,9 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="dashboard/profile" element={<Profile />} />
           <Route path="dashboard/all-product" element={<AllProduct />} />
+          <Route path="dashboard/order" element={<OrderShow />} />
+          <Route path="dashboard/historical-data" element={<HistoricalData />} />
+          <Route path="dashboard/set-alart" element={<ShowSetAlartData />} />
         </Route>
       </Routes>
     </main>

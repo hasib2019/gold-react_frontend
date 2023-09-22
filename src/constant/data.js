@@ -15,6 +15,21 @@ export const menuItems = [
     link: "dashboard/all-product",
   },
   {
+    title: "Order",
+    icon: "heroicons-outline:shopping-cart", 
+    link: "dashboard/order",
+  },
+  {
+    title: "Historical Data",
+    icon: "heroicons-outline:shopping-cart", 
+    link: "dashboard/historical-data",
+  },
+  {
+    title: "Set Alart Data",
+    icon: "heroicons-outline:shopping-cart", 
+    link: "dashboard/set-alart",
+  },
+  {
     title: "Multi Level",
     icon: "heroicons:share",
     link: "#",
