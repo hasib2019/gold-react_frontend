@@ -1,32 +1,72 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import { orderListApi } from '../../../url/ApiList';
 import Card from "@/components/ui/Card";
+import Select from "@/components/ui/Select";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { orderListApi, orderStatusApi } from '../../../url/ApiList';
+import { toast } from "react-toastify";
 
 const ShowOrder = () => {
-    const [orderData, setOrderData] = useState([])
-    const token = typeof window !== "undefined" ? JSON.parse(localStorage.getItem("token")) : null;
-    const config = {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      };
-    console.log({orderData})
-    useEffect(() => {
-        getProduct()
-      }, []);
-    
-      const getProduct = async () => {
-        try {
-          const getOrderApi = await axios.get(orderListApi, config);
-          console.log({ getOrderApi: getOrderApi.data })
-          setOrderData(getOrderApi.data.data)
-        } catch (error) {
-          console.log({ error })
-        }
-      }
+  const [orderData, setOrderData] = useState([]);
+  const token = typeof window !== "undefined" ? JSON.parse(localStorage.getItem("token")) : null;
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+
+  useEffect(() => {
+    getProduct()
+  }, []);
+
+  const getProduct = async () => {
+    try {
+      const getOrderApi = await axios.get(orderListApi, config);
+      console.log({ getOrderApi: getOrderApi.data })
+      setOrderData(getOrderApi.data.data)
+    } catch (error) {
+      console.log({ error })
+    }
+  }
+
+  const options = [
+    {
+      value: "pending",
+      label: "Pending",
+    },
+    {
+      value: "confirm",
+      label: "confirm",
+    },
+    {
+      value: "done",
+      label: "Done",
+    },
+    {
+      value: "rejected",
+      label: "Rejected",
+    },
+  ];
+
+  const handleChange = async (e, orderId) => {
+    const { name, value } = e.target;
+    console.log({ name, value, orderId });
+    const payload = {
+      id: orderId,
+      status: value
+    }
+    try {
+      const stausData = await axios.put(orderStatusApi, payload, config);
+      toast.success(stausData.data.message);
+      getProduct();
+    } catch (error) {
+      toast.error("Not updated");
+    }
+  }
+
+  console.log({})
+
   return (
-        <div className="grid xl:grid-cols-1 grid-cols-1 gap-5">
+    <div className="grid xl:grid-cols-1 grid-cols-1 gap-5">
       <Card title="Hover Table" noborder>
         <div className="overflow-x-auto -mx-6">
           <div className="inline-block min-w-full align-middle">
@@ -44,7 +84,7 @@ const ShowOrder = () => {
                 <tbody className="bg-white divide-y divide-slate-100 dark:bg-slate-800 dark:divide-slate-700">
                   {orderData.map((row, i) => (
                     <tr key={i} className="hover:bg-slate-200 dark:hover:bg-slate-700">
-                      <td className="table-td">{i+1}</td>
+                      <td className="table-td">{i + 1}</td>
                       <td className="table-td">{row?.product_name}</td>
                       <td className="table-td">
                         <img
@@ -57,7 +97,14 @@ const ShowOrder = () => {
                         />
                       </td>
                       <td className="table-td">{row?.shape}</td>
-                      <td className="table-td">{row?.status}</td>
+                      <td className="table-td">
+                        {/* {row?.status} */}
+                        <Select
+                          options={options}
+                          onChange={(e) => handleChange(e, row.id)}
+                          value={row?.status}
+                        />
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -71,27 +118,3 @@ const ShowOrder = () => {
 }
 
 export default ShowOrder
-
-
-// const ShowOrder = () => {
-//   const [orderData, setOrderData] = useState([]);
-//   console.log({ productData })
-//   useEffect(() => {
-//     getProduct()
-//   }, []);
-
-//   const getProduct = async () => {
-//     try {
-//       const getOrderApi = await axios.get(orderListApi);
-//       console.log({ getOrderApi: getOrderApi.data })
-//       setOrderData(getOrderApi.data)
-//     } catch (error) {
-//       console.log({ error })
-//     }
-//   }
-//   return (
-
-//   );
-// };
-
-// export default ShowOrder;
