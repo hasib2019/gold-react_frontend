@@ -22,7 +22,6 @@ const ShowIncrDecr = () => {
   const getIncrDecr = async () => {
     try {
       const getOrderApi = await axios.get(inceDecrApi, config);
-      console.log({ getOrderApi: getOrderApi.data })
       setIncrDecrData(getOrderApi.data)
     } catch (error) {
       console.log({ error })
