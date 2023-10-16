@@ -49,7 +49,6 @@ const ShowOrder = () => {
 
   const handleChange = async (e, orderId) => {
     const { name, value } = e.target;
-    console.log({ name, value, orderId });
     const payload = {
       id: orderId,
       status: value
