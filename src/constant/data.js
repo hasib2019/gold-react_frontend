@@ -34,6 +34,11 @@ export const menuItems = [
     icon: "heroicons-outline:shopping-cart", 
     link: "dashboard/incr-decr",
   },
+  {
+    title: "Alart News",
+    icon: "heroicons-outline:shopping-cart", 
+    link: "dashboard/alart-news",
+  },
   // {
   //   title: "Multi Level",
   //   icon: "heroicons:share",

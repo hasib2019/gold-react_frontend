@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Dropdown from "@/components/ui/Dropdown";
 import Icon from "@/components/ui/Icon";
 import { Menu, Transition } from "@headlessui/react";
@@ -6,8 +6,29 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import UserAvatar from "@/assets/images/all-img/user.png";
+import { meApi } from "../../../../../url/ApiList";
+import axios from "axios";
 
 const profileLabel = () => {
+  const [userData, setUserData] = useState([]);
+  const token =
+    typeof window !== "undefined"
+      ? JSON.parse(localStorage.getItem("token"))
+      : null;
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+
+  useEffect(() => {
+    usersData();
+  }, []);
+
+  const usersData = async () => {
+    const getUserData = await axios.get(meApi, config);
+    setUserData(getUserData.data);
+  };
   return (
     <div className="flex items-center">
       <div className="flex-1 ltr:mr-[10px] rtl:ml-[10px]">
@@ -21,7 +42,7 @@ const profileLabel = () => {
       </div>
       <div className="flex-none text-slate-600 dark:text-white text-sm font-normal items-center lg:flex hidden overflow-hidden text-ellipsis whitespace-nowrap">
         <span className="overflow-hidden text-ellipsis whitespace-nowrap w-[85px] block">
-          Albert Flores
+          {userData?.name}
         </span>
         <span className="text-base inline-block ltr:ml-[10px] rtl:mr-[10px]">
           <Icon icon="heroicons-outline:chevron-down"></Icon>
@@ -37,66 +58,67 @@ const Profile = () => {
 
   const handleLogout = () => {
     // Clear user data from local storage
-    localStorage.removeItem("user");
-    dispatch(logOut());
+    localStorage.removeItem("token");
+    // dispatch(logOut());
+    navigate("/");
   };
 
   const ProfileMenu = [
-    {
-      label: "Profile",
-      icon: "heroicons-outline:user",
+    // {
+    //   label: "Profile",
+    //   icon: "heroicons-outline:user",
 
-      action: () => {
-        console.log("profile");
-      },
-    },
-    {
-      label: "Chat",
-      icon: "heroicons-outline:chat",
-      action: () => {
-        console.log("chat");
-      },
-    },
-    {
-      label: "Email",
-      icon: "heroicons-outline:mail",
-      action: () => {
-        console.log("email");
-      },
-    },
-    {
-      label: "Todo",
-      icon: "heroicons-outline:clipboard-check",
-      action: () => {
-        console.log("todo");
-      },
-    },
-    {
-      label: "Settings",
-      icon: "heroicons-outline:cog",
-      action: () => {
-        console.log("settings");
-      },
-    },
-    {
-      label: "Price",
-      icon: "heroicons-outline:credit-card",
-      action: () => {
-        console.log("price");
-      },
-    },
-    {
-      label: "Faq",
-      icon: "heroicons-outline:information-circle",
-      action: () => {
-        console.log("faq");
-      },
-    },
+    //   action: () => {
+    //     console.log("profile");
+    //   },
+    // },
+    // {
+    //   label: "Chat",
+    //   icon: "heroicons-outline:chat",
+    //   action: () => {
+    //     console.log("chat");
+    //   },
+    // },
+    // {
+    //   label: "Email",
+    //   icon: "heroicons-outline:mail",
+    //   action: () => {
+    //     console.log("email");
+    //   },
+    // },
+    // {
+    //   label: "Todo",
+    //   icon: "heroicons-outline:clipboard-check",
+    //   action: () => {
+    //     console.log("todo");
+    //   },
+    // },
+    // {
+    //   label: "Settings",
+    //   icon: "heroicons-outline:cog",
+    //   action: () => {
+    //     console.log("settings");
+    //   },
+    // },
+    // {
+    //   label: "Price",
+    //   icon: "heroicons-outline:credit-card",
+    //   action: () => {
+    //     console.log("price");
+    //   },
+    // },
+    // {
+    //   label: "Faq",
+    //   icon: "heroicons-outline:information-circle",
+    //   action: () => {
+    //     console.log("faq");
+    //   },
+    // },
     {
       label: "Logout",
       icon: "heroicons-outline:login",
       action: () => {
-        console.log("logout");
+        handleLogout();
       },
     },
   ];

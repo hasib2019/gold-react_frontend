@@ -13,6 +13,7 @@ const OrderShow = lazy(() => import("./pages/order/show"));
 const HistoricalData = lazy(() => import("./pages/historical-data/show"));
 const ShowSetAlartData = lazy(() => import("./pages/set-alart/show"));
 const IncrDecr = lazy(() => import("./pages/incr-decr/show"));
+const AlartNews = lazy(() => import("./pages/alart-news/index"));
 
 import AuthLayout from "./layout/AuthLayout";
 import Layout from "./layout/Layout";
@@ -35,6 +36,7 @@ function App() {
           <Route path="dashboard/historical-data" element={<HistoricalData />} />
           <Route path="dashboard/set-alart" element={<ShowSetAlartData />} />
           <Route path="dashboard/incr-decr" element={<IncrDecr />} />
+          <Route path="dashboard/alart-news" element={<AlartNews />} />
         </Route>
       </Routes>
     </main>

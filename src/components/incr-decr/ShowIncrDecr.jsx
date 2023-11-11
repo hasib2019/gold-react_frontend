@@ -12,7 +12,6 @@ import Tooltip from "../ui/Tooltip";
 
 const ShowIncrDecr = () => {
   const [incrDecrData, setIncrDecrData] = useState([]);
-  console.log({ incrDecrData });
   const token =
     typeof window !== "undefined"
       ? JSON.parse(localStorage.getItem("token"))
@@ -36,7 +35,7 @@ const ShowIncrDecr = () => {
       });
       setIncrDecrData(data);
     } catch (error) {
-      console.log({ error });
+      // console.log({ error });
     }
   };
 
@@ -51,7 +50,6 @@ const ShowIncrDecr = () => {
     decr: "",
   });
 
-  console.log({ value });
   const editItem = (data) => {
     setIsEdit(true);
     setValue(data);

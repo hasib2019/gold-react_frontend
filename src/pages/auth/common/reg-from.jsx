@@ -47,12 +47,12 @@ const RegForm = () => {
       // if (response.error) {
       //   throw new Error(response.error.message);
       // }
-      console.log({response})
+      // console.log({response})
       reset();
       navigate("/");
       toast.success(response.data.message);
     } catch (error) {
-      console.log(error.response.data.message); // Log the error response to the console for debugging
+      // console.log(error.response.data.message); // Log the error response to the console for debugging
 
       const errorMessage =
         error.response?.data?.message ||

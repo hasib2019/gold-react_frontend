@@ -21,10 +21,9 @@ const ShowOrder = () => {
   const getProduct = async () => {
     try {
       const getOrderApi = await axios.get(orderListApi, config);
-      console.log({ getOrderApi: getOrderApi.data })
       setOrderData(getOrderApi.data.data)
     } catch (error) {
-      console.log({ error })
+      // console.log({ error })
     }
   }
 
@@ -61,8 +60,6 @@ const ShowOrder = () => {
       toast.error("Not updated");
     }
   }
-
-  console.log({})
 
   return (
     <div className="grid xl:grid-cols-1 grid-cols-1 gap-5">

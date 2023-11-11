@@ -5,7 +5,6 @@ import axios from 'axios';
 
 const ShowSetAlart = () => {
     const [setAlartData, setSetAlartData] = useState([])
-    console.log({setAlartData})
     useEffect(() => {
         getSetAlartData()
       }, []);
@@ -13,10 +12,9 @@ const ShowSetAlart = () => {
       const getSetAlartData = async () => {
         try {
           const getSetAlartDataApi = await axios.get(makeSetAlartApi);
-          console.log({ getSetAlartDataApi: getSetAlartDataApi.data })
           setSetAlartData(getSetAlartDataApi.data)
         } catch (error) {
-          console.log({ error })
+          // console.log({ error })
         }
       }
 
