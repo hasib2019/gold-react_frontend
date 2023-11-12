@@ -29,7 +29,7 @@ const login = () => {
               <div className="text-center 2xl:mb-10 mb-4">
                 <h4 className="font-medium">Sign in</h4>
                 <div className="text-slate-500 dark:text-slate-400 text-base">
-                  Sign in to your account to start using Crtal Gold
+                  Sign in to your account to start using Crystal Gold
                 </div>
               </div>
               <LoginForm />
@@ -52,7 +52,7 @@ const login = () => {
               </div>
             </div>
             <div className="auth-footer text-center">
-              Copyright 2023, Crtal Gold All Rights Reserved.
+              Copyright 2023, Crystal Gold All Rights Reserved.
             </div>
           </div>
         </div>
