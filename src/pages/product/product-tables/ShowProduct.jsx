@@ -108,9 +108,9 @@ const ShowProduct = () => {
           <Card title="Product Inputs">
             <div className="grid lg:grid-cols-1 md:grid-cols-1 grid-cols-1 gap-2">
               <Textinput
-                label="Title"
+                label="Product Name"
                 type="text"
-                placeholder="Write Title"
+                placeholder="Product Name"
                 onChange={(e) => handleChagne(e, "product_name")}
                 defaultValue={value.product_name}
               />

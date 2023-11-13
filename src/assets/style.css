@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+:root {
+    --base-color: gold;
+  }
+body{
+    margin: 0;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    position: relative;
+}
+table{
+    
+    margin: .8rem auto;
+    width: 90%;
+    border-radius: 10%;
+}
+th {
+    background-color: antiquewhite;
+    padding: 7px;
+    text-align: center;
+}
+td {
+    background-color: antiquewhite;
+    padding: 6px;
+    text-align: center;
+}
+
+.logo{
+    background-color: black;
+    padding: .5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo .left{
+    text-align: center;
+}
+.logo .left img{
+    width: 70px;
+}
+.logo .left span{
+    color: var(--base-color); 
+}
+.logo button{
+    border: 0;
+    border-radius: 15px;
+    height: 30px;
+    padding: .5rem 2rem;
+    background-color: var(--base-color);
+    font-weight: 600;
+}
+.menu{
+    display: flex;
+    background-color: rgb(41, 40, 40);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-top: 1px solid var(--base-color);
+    border-bottom: 1px solid var(--base-color);
+    padding: 10px 0;
+}
+.menu-item {
+    cursor: pointer;
+}
+.menu button {
+    padding: .8rem 4rem;
+    border: 0;
+    background: var(--base-color);
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: darkslategrey;
+}
+.menu .icon{
+    height: 32px;
+    width: 32px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.icon img{
+    width: 100%;
+    height: 100%;
+
+}
+.red{
+    color: red;
+}
+.green {
+    color: #00ad00;
+}
+.font-14{
+    font-size: 14px;
+}
+.font-12{
+    font-size: 12px;
+}
+.range {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.medium {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.range:last-child{
+    position: relative;
+}
+.range:last-child::after{
+    content:'';
+    display: block;
+    background-color: rgb(63, 53, 53);
+    height: 80%;
+    width: 1px;
+    position: absolute;
+}
+.ade{
+    background: var(--base-color);
+    color: #534719;
+    font-weight: 700;
+}
+td, th {
+    width: 30%;
+}
+
+.w-half{
+    width:15%;
+}
+
+.footer{
+    background-color: rgb(41, 40, 40);
+    border-top: 1px solid #FFF;
+    padding: 5px 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+
+.footer .left{
+    margin-right: 5px;
+    width:30%;
+    text-align: center;
+    font-size: 13px;
+    color: var(--base-color);
+}
+
+.footer .right{
+    width:60%;
+    color: #FFF;
+    font-size: 13px;
+}

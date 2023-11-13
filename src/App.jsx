@@ -14,6 +14,7 @@ const HistoricalData = lazy(() => import("./pages/historical-data/show"));
 const ShowSetAlartData = lazy(() => import("./pages/set-alart/show"));
 const IncrDecr = lazy(() => import("./pages/incr-decr/show"));
 const AlartNews = lazy(() => import("./pages/alart-news/index"));
+const Home = lazy(() => import("./pages/Home/Home"));
 
 import AuthLayout from "./layout/AuthLayout";
 import Layout from "./layout/Layout";
@@ -24,7 +25,8 @@ function App() {
       <Routes>
         {/* admin login layout use  */}
         <Route path="/" element={<AuthLayout />}>
-          <Route path="/" element={<Login />} /> {/*  //use this */}
+          <Route path="/" element={<Home />} /> {/*  //use this */}
+          <Route path="/login" element={<Login />} /> {/*  //use this */}
           <Route path="/register" element={<Register />} /> {/*  //use this */}
         </Route>
         {/* dashboard layout use  */}
@@ -33,7 +35,10 @@ function App() {
           <Route path="dashboard/profile" element={<Profile />} />
           <Route path="dashboard/all-product" element={<AllProduct />} />
           <Route path="dashboard/order" element={<OrderShow />} />
-          <Route path="dashboard/historical-data" element={<HistoricalData />} />
+          <Route
+            path="dashboard/historical-data"
+            element={<HistoricalData />}
+          />
           <Route path="dashboard/set-alart" element={<ShowSetAlartData />} />
           <Route path="dashboard/incr-decr" element={<IncrDecr />} />
           <Route path="dashboard/alart-news" element={<AlartNews />} />
