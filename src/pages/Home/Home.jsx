@@ -60,45 +60,13 @@ const Home = () => {
     const intervalId = setInterval(() => {
       // getLiveRates(previousLiveRateData);
       getLiveRates(liveRateData);
-    }, 3000);
+    }, 2000);
     return () => clearInterval(intervalId);
   }, []);
 
   return (
-    <div style={{ minHeight: "100vh" }}>
-      <div className="logo">
-        <Link to="/">
-          <div className="left">
-            <img src={HeaderLogo} alt="" />
-            <span>CRYSTAL GOLD</span>
-          </div>
-        </Link>
+    
 
-        <Link to="/login">
-          <button onclick=" window.open('#', '_blank'); return false;">
-            &nbsp; Login
-          </button>
-        </Link>
-      </div>
-      <div className="menu">
-        <div className="menu-item">
-          <div className="icon">
-            {/* <img src="images/phone.png" alt=""> */}
-            <img src={phonePng} alt="" />
-          </div>
-        </div>
-        <div className="menu-item">
-          <div className="button">
-            <button>Live Rates</button>
-          </div>
-        </div>
-        <div className="menu-item">
-          <div className="icon">
-            {/* <img src="images/whatsapp.png" alt=""> */}
-            <img src={whatsappPng} alt="" />
-          </div>
-        </div>
-      </div>
       <div style={{ paddingBottom: 30 }}>
         <table className="table-1">
           <tr>
@@ -108,11 +76,11 @@ const Home = () => {
           </tr>
           <tr>
             <th rowspan="2">{liveRateData[0]?.type}</th>
-            <td className={`medium ${liveRateData[0]?.ask_buy_color}`}>
-              {liveRateData[0]?.ask_buy}
-            </td>
             <td className={`medium ${liveRateData[0]?.bid_sell_color}`}>
               {liveRateData[0]?.bid_sell}
+            </td>
+            <td className={`medium ${liveRateData[0]?.ask_buy_color}`}>
+              {liveRateData[0]?.ask_buy}
             </td>
           </tr>
           <tr className="font-14">
@@ -127,18 +95,31 @@ const Home = () => {
         <table>
           {liveRateData?.map((item, index) => {
             return (
-              item.type !== "GOLD OZ" && (
+              item.type !== "GOLD OZ" &&
+              item.type !== "GOLD" && (
                 <tr key={index}>
                   <th>{item.type}</th>
-                  <td className={`w-half ${item?.ask_buy_color}`}>
+                  {/* <td className={`w-half ${item?.ask_buy_color}`}>
                     {item?.ask_buy}
                   </td>
                   <td className={`w-half ade ${item?.bid_sell_color}`}>
                     {item?.bid_sell}
+                  </td> */}
+                  <td className={`w-half`}>
+                    {item.type == "TEN TOLA BAR"
+                      ? "TTB"
+                      : item.type == "KILO BAR 995"
+                      ? "1KG"
+                      : item.type == "KILO BAR 9999"
+                      ? "1KG"
+                      : "1GM"}
                   </td>
+                  <td className={`w-half ade`}>AED</td>
                   <td>
                     <div>
-                      <span className="medium">{item?.low}</span>
+                      <span className={`medium ${item?.ask_buy_color}`}>
+                        {item?.ask_buy}
+                      </span>
                       <div className="font-12 range">
                         <div>
                           <span className="red">L : </span> {item?.low}
@@ -155,18 +136,8 @@ const Home = () => {
           })}
         </table>
       </div>
-      <div className="footer">
-        <div className="left">
-          Developed By: <a href="https:creativeitbari.com">Creative IT Bari</a>{" "}
-        </div>
-        <div className="right">
-          <marquee direction="left" scrollamount="3">
-            Welcome to Crystal Gold, +971 54 217 2625 (whatsapp), +971 54 217
-            2624 (Phone).
-          </marquee>
-        </div>
-      </div>
-    </div>
+
+   
   );
 };
 

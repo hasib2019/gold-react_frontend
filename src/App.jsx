@@ -15,17 +15,24 @@ const ShowSetAlartData = lazy(() => import("./pages/set-alart/show"));
 const IncrDecr = lazy(() => import("./pages/incr-decr/show"));
 const AlartNews = lazy(() => import("./pages/alart-news/index"));
 const Home = lazy(() => import("./pages/Home/Home"));
+const PrivacyPolicy = lazy(() => import("./pages/privacy-policy/Index"));
+const Support = lazy(() => import("./pages/support/Index"));
 
 import AuthLayout from "./layout/AuthLayout";
 import Layout from "./layout/Layout";
+import HomeLayout from "./layout/HomeLayout";
 
 function App() {
   return (
     <main className="App  relative">
       <Routes>
         {/* admin login layout use  */}
-        <Route path="/" element={<AuthLayout />}>
-          <Route path="/" element={<Home />} /> {/*  //use this */}
+        <Route path="/" element={<HomeLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/support" element={<Support />} />
+        </Route>
+        <Route path="" element={<AuthLayout />}>
           <Route path="/login" element={<Login />} /> {/*  //use this */}
           <Route path="/register" element={<Register />} /> {/*  //use this */}
         </Route>

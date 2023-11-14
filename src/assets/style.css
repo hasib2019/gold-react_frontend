@@ -9,25 +9,35 @@ body {
   min-height: 100vh;
   position: relative;
 }
+.terms {
+  margin: 0.8rem auto;
+  width: 90%;
+  /* color: #fff; */
+  padding-bottom: 30px;
+}
+.terms p {
+  text-align: justify;
+}
 table {
   margin: 0.8rem auto;
   width: 90%;
-  border-radius: 10%;
 }
 th {
   background-color: antiquewhite;
   padding: 7px;
   text-align: center;
+  border: 1px solid #000;
 }
 td {
   background-color: antiquewhite;
   padding: 6px;
   text-align: center;
+  border: 1px solid #000;
 }
 
 .logo {
   background-color: black;
-  padding: 0.5rem 2rem;
+  padding: 0.4rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,15 +49,16 @@ td {
   align-items: center;
 }
 .logo .left img {
-  width: 70px;
+  width: 50px;
 }
 .logo .left span {
   color: var(--base-color);
+  font-size: 10px;
 }
 .logo button {
   border: 0;
   border-radius: 20px;
-  padding: 0.5rem 2rem;
+  padding: 0.2rem 2rem;
   background-color: var(--base-color);
   font-weight: 600;
 }
@@ -59,13 +70,15 @@ td {
   gap: 30px;
   border-top: 1px solid var(--base-color);
   border-bottom: 1px solid var(--base-color);
-  padding: 10px 0;
+  padding: 5px 0;
 }
 .menu-item {
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 .menu button {
-  padding: 0.8rem 4rem;
+  padding: 0.3rem 3rem;
   border: 0;
   background: var(--base-color);
   border-radius: 4px;
