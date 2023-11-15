@@ -22,17 +22,20 @@ table {
   margin: 0.8rem auto;
   width: 90%;
 }
+.table-1{
+  background-color: #000;
+}
 th {
-  background-color: antiquewhite;
+  background-color: #FFF;
   padding: 7px;
   text-align: center;
-  border: 1px solid #000;
+  border: 2px solid #000;
 }
 td {
-  background-color: antiquewhite;
+  background-color: #FFF;
   padding: 6px;
   text-align: center;
-  border: 1px solid #000;
+  border: 2px solid #000;
 }
 
 .logo {
@@ -115,8 +118,8 @@ td {
   gap: 2rem;
 }
 .medium {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 .range:last-child {
   position: relative;
@@ -147,11 +150,14 @@ th {
   background-color: rgb(41, 40, 40);
   border-top: 1px solid #fff;
   padding: 5px 0;
-  width: 100%;
-  display: flex;
-  position: sticky;
+  position: fixed;
+  left: 0;
   bottom: 0;
-}
+  width: 100%;
+  color: white;
+  text-align: center;
+  display: flex;
+  }
 
 .footer .left {
   margin-right: 5px;

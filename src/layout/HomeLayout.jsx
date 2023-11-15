@@ -12,7 +12,7 @@ const HomeLayout = () => {
   const navigate = useNavigate();
 
   return (
-    <div style={{ minHeight: "100vh", color: "red !important" }}>
+    <div style={{ minHeight: "100vh", backgroundColor: "black !important", color: "red !important" }}>
       <div className="logo">
         <Link to="/">
           <div className="left">

@@ -41,9 +41,11 @@ const Home = () => {
         const updatedItem = {
           ...item,
           ask_buy_color:
-            item?.ask_buy > previousDataItem?.ask_buy ? "green" : "red",
+          item?.ask_buy === previousDataItem?.ask_buy? "black": item?.ask_buy < previousDataItem?.ask_buy? "red": "green",
+            // item?.ask_buy == previousDataItem?.ask_buy ? "black" : item?.ask_buy < previousDataItem?.ask_buy ? "green" : item?.ask_buy > previousDataItem?.ask_buy ? "red" : "black",
           bid_sell_color:
-            item?.bid_sell > previousDataItem?.bid_sell ? "green" : "red",
+          item?.bid_sell === previousDataItem?.bid_sell? "black": item?.bid_sell < previousDataItem?.bid_sell? "red": "green",
+            // item?.bid_sell > previousDataItem?.bid_sell ? "green" : "red",
         };
         return updatedItem;
       });
@@ -65,8 +67,6 @@ const Home = () => {
   }, []);
 
   return (
-    
-
       <div style={{ paddingBottom: 30 }}>
         <table className="table-1">
           <tr>
