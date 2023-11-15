@@ -12,4 +12,5 @@ export const inceDecrApi = liveIp + 'incr-decr';
 export const inceDecrUpdateApi = liveIp + 'incr-decr-update';
 export const newsAlartApi = liveIp + 'news-alart';
 export const meApi = liveIp + 'me';
-export const liveRateApi = liveIp + 'gold-price-crystal-jewelary'
+export const liveRateApi = liveIp + 'gold-price-crystal-jewelary';
+export const supportApi = liveIp + 'support';
