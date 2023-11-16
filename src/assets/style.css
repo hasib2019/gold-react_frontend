@@ -135,7 +135,7 @@ td {
   gap: 2rem;
 }
 .medium {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 .range:last-child {
@@ -151,7 +151,6 @@ td {
 }
 .ade {
   background: var(--base-color);
-  /* color: #534719; */
   font-weight: 700;
 }
 td,
@@ -161,6 +160,7 @@ th {
 
 .w-half {
   width: 15%;
+  font-weight: 700;
 }
 
 .footer {
