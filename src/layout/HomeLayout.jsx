@@ -12,7 +12,7 @@ const HomeLayout = () => {
   const navigate = useNavigate();
 
   return (
-    <div style={{ minHeight: "100vh", color: "red !important" }}>
+    <div style={{ minHeight: "100vh", backgroundColor: "#000" }}>
       <div className="logo">
         <Link to="/">
           <div className="left">
@@ -21,48 +21,33 @@ const HomeLayout = () => {
           </div>
         </Link>
 
+        <div className="right">
+          <div className="menu">
+            <div className="menu-item">
+              <div className="button">
+              <Link to="/">
+                <button>Live Rates</button>
+              </Link>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
         <Link to="/login">
-          <button onclick=" window.open('/login', '_blank'); return false;">
+          <button onclick=" window.open('login', '_blank'); return false;">
             &nbsp; Login
           </button>
         </Link>
       </div>
-      <div className="menu">
-        <div className="menu-item">
-          <Link to="/privacy-policy">
-            <div className="left">
-              <span>Privacy Policy</span>
-            </div>
-          </Link>
-          <div className="icon">
-            {/* <img src="images/phone.png" alt=""> */}
-            <img src={phonePng} alt="" />
-          </div>
-        </div>
-        <div className="menu-item">
-          <div className="button">
-            <button>Live Rates</button>
-          </div>
-        </div>
-        <div className="menu-item">
-          <div className="icon">
-            {/* <img src="images/whatsapp.png" alt=""> */}
-            <img src={whatsappPng} alt="" />
-          </div>
-          <Link to="/support">
-            <div className="left">
-              <span>Support</span>
-            </div>
-          </Link>
-        </div>
-      </div>
+      <hr/>
       <Suspense fallback={<Loading />}>
         <ToastContainer />
         {<Outlet />}
       </Suspense>
       <div className="footer">
         <div className="left">
-          Developed By: <a href="https:creativeitbari.com">Creative IT Bari</a>{" "}
+          Developed By: <a href="https://creativeitbari.com">Creative IT Bari</a>{" "}
         </div>
         <div className="right">
           <marquee direction="left" scrollamount="3">
