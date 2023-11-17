@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Loading from "@/components/Loading";
@@ -10,6 +10,46 @@ import "@/assets/style.css";
 
 const HomeLayout = () => {
   const navigate = useNavigate();
+  const [uaeTime, setUaeTime] = useState('');
+  const [nyTime, setNyTime] = useState('');
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date();
+
+      // UAE time (GMT+4)
+      const uaeOptions = {
+        timeZone: 'Asia/Dubai',
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: true,
+      };
+      const uaeTimeString = now.toLocaleString('en-US', uaeOptions);
+      setUaeTime(uaeTimeString);
+
+      // New York time (GMT-5)
+      const nyOptions = {
+        timeZone: 'America/New_York',
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: true,
+      };
+      const nyTimeString = now.toLocaleString('en-US', nyOptions);
+      setNyTime(nyTimeString);
+    }, 1000); // Update every second
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#000" }}>
@@ -20,6 +60,10 @@ const HomeLayout = () => {
             <span>CRYSTAL GOLD</span>
           </div>
         </Link>
+
+        <div>
+      <p className="datetimeuae">UAE: {uaeTime}</p>
+    </div>
 
         <div className="right">
           <div className="menu">
@@ -33,6 +77,9 @@ const HomeLayout = () => {
 
           </div>
         </div>
+        <div>
+      <p className="datetimeny">NY: {nyTime}</p>
+    </div>
 
         <Link to="/login">
           <button onclick=" window.open('login', '_blank'); return false;">

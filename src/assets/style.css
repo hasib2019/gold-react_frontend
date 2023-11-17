@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 :root {
-  --base-color: gold;
+  --base-color: rgb(163, 139, 0);
 }
 body {
   margin: 0;
@@ -32,24 +32,77 @@ body {
 .terms ul{
   padding-left: 50px;
 }
-table {
+ table {
   margin: 0.8rem auto;
   width: 90%;
+  border-spacing: 0;
 }
-.table-1{
-  background-color: #000;
+
+th, td{ 
+  padding: 5px;
 }
-th {
+
+th{
+  border-bottom: 2px solid  var(--base-color);
+  background: rgb(206,206,206);
+  background: -moz-linear-gradient(180deg, rgba(206,206,206,1) 0%, rgba(255,255,255,1) 50%, rgba(206,206,206,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(206,206,206,1) 0%, rgba(255,255,255,1) 50%, rgba(206,206,206,1) 100%);
+  background: linear-gradient(180deg, rgba(206,206,206,1) 0%, rgba(255,255,255,1) 50%, rgba(206,206,206,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cecece",endColorstr="#cecece",GradientType=1);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+}
+
+td{
   background-color: #FFF;
-  padding: 7px;
+  color: #000;
   text-align: center;
-  border: 2px solid #000;
+  border-bottom: 2px solid  var(--base-color);
 }
-td {
-  background-color: #FFF;
-  padding: 6px;
-  text-align: center;
-  border: 2px solid #000;
+
+tr:first-child th:first-child{
+  border-top-left-radius: 10px;
+  border-right: 2px solid  var(--base-color);
+}
+
+tr:first-child th:last-child{
+  border-top-right-radius: 10px;
+  border-left: 2px solid  var(--base-color);
+}
+
+tr:first-child td:first-child{
+  border-top-left-radius: 10px;
+  border-right: 2px solid  var(--base-color);
+}
+
+tr:first-child td:first-child{
+  border-top-left-radius: 10px;
+  border-right: 2px solid  var(--base-color);
+  font-size: 2rem;
+  font-weight: 700;
+  border-bottom: 2px solid  var(--base-color);
+  background: rgb(206,206,206);
+  background: -moz-linear-gradient(180deg, rgba(206,206,206,1) 0%, rgba(255,255,255,1) 50%, rgba(206,206,206,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(206,206,206,1) 0%, rgba(255,255,255,1) 50%, rgba(206,206,206,1) 100%);
+  background: linear-gradient(180deg, rgba(206,206,206,1) 0%, rgba(255,255,255,1) 50%, rgba(206,206,206,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cecece",endColorstr="#cecece",GradientType=1);
+}
+
+tr:first-child td:last-child{
+  border-top-right-radius: 10px;
+}
+
+.head{
+  font-size: 2rem;
+  font-weight: 700;
+  border-right: 2px solid  var(--base-color);
+  border-bottom: 2px solid  var(--base-color);
+  background: rgb(206,206,206);
+  background: -moz-linear-gradient(180deg, rgba(206,206,206,1) 0%, rgba(255,255,255,1) 50%, rgba(206,206,206,1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(206,206,206,1) 0%, rgba(255,255,255,1) 50%, rgba(206,206,206,1) 100%);
+  background: linear-gradient(180deg, rgba(206,206,206,1) 0%, rgba(255,255,255,1) 50%, rgba(206,206,206,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cecece",endColorstr="#cecece",GradientType=1);
 }
 
 .logo {
@@ -65,11 +118,12 @@ td {
   align-items: center;
 }
 .logo .left img {
-  width: 80px;
+  width: 100px;
 }
 .logo .left span {
   color: var(--base-color);
-  font-size: 15px;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 .logo .right {
   display: flex;
@@ -81,8 +135,9 @@ td {
   border: 0;
   border-radius: 20px;
   padding: 0.2rem 2rem;
-  background-color: var(--base-color);
-  font-weight: 600;
+  background-color: brown;
+  font-weight: 700;
+  color: #FFF;
 }
 .menu {
   display: flex;
@@ -98,13 +153,12 @@ td {
   align-items: center;
 }
 .menu button {
-  padding: 0.3rem 3rem;
   border: 0;
   background: var(--base-color);
   border-radius: 4px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: darkslategrey;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #FFF;
 }
 .menu .icon {
   height: 32px;
@@ -116,14 +170,24 @@ td {
   width: 100%;
   height: 100%;
 }
+.datetimeuae{
+  color:aqua;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.datetimeny{
+  color:chartreuse;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
 .red {
   color: red;
 }
 .green {
   color: #00ad00;
 }
-.font-14 {
-  font-size: 14px;
+.font-16 {
+  font-size: 25px;
 }
 .font-12 {
   font-size: 12px;
@@ -135,7 +199,7 @@ td {
   gap: 2rem;
 }
 .medium {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 .range:last-child {
@@ -150,7 +214,8 @@ td {
   position: absolute;
 }
 .ade {
-  background: var(--base-color);
+  background: #e9c722;
+  color: #FFF;
   font-weight: 700;
 }
 td,
@@ -161,6 +226,7 @@ th {
 .w-half {
   width: 15%;
   font-weight: 700;
+  font-size: 1.8rem;
 }
 
 .footer {
@@ -180,14 +246,14 @@ th {
   margin-right: 5px;
   width: 30%;
   text-align: center;
-  font-size: 13px;
+  font-size: 1.3rem;
   color: var(--base-color);
 }
 
 .footer .right {
   width: 60%;
   color: #fff;
-  font-size: 13px;
+  font-size: 1rem;
 }
 hr{
 border-top: 1px solid var(--base-color);

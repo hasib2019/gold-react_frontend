@@ -64,7 +64,8 @@ const Home = () => {
 
   return (
     <div style={{ paddingBottom: 30 }}>
-      <table className="table-1">
+
+      <table>
         <tr>
           <th>PRODUCT</th>
           <th>$ BID(SELL)</th>
@@ -79,7 +80,7 @@ const Home = () => {
             {liveRateData[0]?.ask_buy}
           </td>
         </tr>
-        <tr className="font-14">
+        <tr className="font-16">
           <td>
             <span className="red">Low :</span> {liveRateData[0]?.low}
           </td>
@@ -88,10 +89,9 @@ const Home = () => {
           </td>
         </tr>
       </table>
-      <table>
-
+      <table className="table-2">
         <tr>
-          <th>{liveRateData[4]?.type}</th>
+          <td>{liveRateData[4]?.type}</td>
           <td className={`w-half`}>TTB</td>
           <td className={`w-half ade`}>AED</td>
           <td>
@@ -99,7 +99,7 @@ const Home = () => {
               <span className={`medium ${liveRateData[4]?.ask_buy_color}`}>
                 {liveRateData[4]?.ask_buy}
               </span>
-              <div className="font-12 range">
+              <div className="font-16 range">
                 <div>
                   <span className="red">L : </span> {liveRateData[4]?.low}
                 </div>
@@ -113,10 +113,9 @@ const Home = () => {
         {liveRateData?.map((item, index) => {
           return (
             item.type !== "GOLD OZ" &&
-            item.type !== "GOLD" &&
             item.type !== "TEN TOLA BAR" && (
               <tr key={index}>
-                <th>{item.type}</th>
+                <td className="head">{item.type}</td>
                 <td className={`w-half`}>
                   {item.type == "KILO BAR 995"
                     ? "1KG"
@@ -130,7 +129,7 @@ const Home = () => {
                     <span className={`medium ${item?.ask_buy_color}`}>
                       {item?.ask_buy}
                     </span>
-                    <div className="font-12 range">
+                    <div className="font-16 range">
                       <div>
                         <span className="red">L : </span> {item?.low}
                       </div>
