@@ -2,10 +2,11 @@ import React, { useState, useEffect, Suspense } from "react";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Loading from "@/components/Loading";
-import HeaderLogo from "@/assets/images/Crystal.jpg";
+import HeaderLogo from "@/assets/images/Crystal.png";
 import { Link } from "react-router-dom";
 import phonePng from "@/assets/images/phone.png";
 import whatsappPng from "@/assets/images/whatsapp.png";
+import bgimage from "@/assets/images/BG_pic.jpg";
 import "@/assets/style.css";
 
 const HomeLayout = () => {
@@ -52,42 +53,40 @@ const HomeLayout = () => {
   }, []);
 
   return (
-    <div style={{ minHeight: "100vh", backgroundColor: "#000" }}>
+    <div style={{ backgroundImage: `url(${bgimage})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    width: '100vw',
+    height: '100vh' }}>
+    
       <div className="logo">
+      <div>
+      <p className="datetimeuae">UAE: {uaeTime}</p>
+      <p className="datetimeny">NY: {nyTime}</p>
+      </div>
         <Link to="/">
           <div className="left">
             <img src={HeaderLogo} alt="" />
-            <span>CRYSTAL GOLD</span>
           </div>
         </Link>
 
-        <div>
-      <p className="datetimeuae">UAE: {uaeTime}</p>
-    </div>
-
         <div className="right">
           <div className="menu">
-            <div className="menu-item">
               <div className="button">
               <Link to="/">
                 <button>Live Rates</button>
               </Link>
               </div>
-            </div>
-
           </div>
         </div>
-        <div>
-      <p className="datetimeny">NY: {nyTime}</p>
-    </div>
 
         <Link to="/login">
-          <button onclick=" window.open('login', '_blank'); return false;">
+          <button onclick=" window.open('/login', '_blank'); return false;">
             &nbsp; Login
           </button>
         </Link>
       </div>
-      <hr/>
       <Suspense fallback={<Loading />}>
         <ToastContainer />
         {<Outlet />}

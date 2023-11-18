@@ -72,7 +72,7 @@ const Home = () => {
           <th>$ ASK(BUY)</th>
         </tr>
         <tr>
-          <th rowspan="2">{liveRateData[0]?.type}</th>
+          <td rowspan="2" className="goldoz">{liveRateData[0]?.type}</td>
           <td className={`medium ${liveRateData[0]?.bid_sell_color}`}>
             {liveRateData[0]?.bid_sell}
           </td>
@@ -81,17 +81,17 @@ const Home = () => {
           </td>
         </tr>
         <tr className="font-16">
-          <td>
+          <td className="low">
             <span className="red">Low :</span> {liveRateData[0]?.low}
           </td>
-          <td>
+          <td className="high">
             <span className="green">High :</span> {liveRateData[0]?.high}
           </td>
         </tr>
       </table>
       <table className="table-2">
         <tr>
-          <td>{liveRateData[4]?.type}</td>
+          <td className="tentolabar">{liveRateData[4]?.type}</td>
           <td className={`w-half`}>TTB</td>
           <td className={`w-half ade`}>AED</td>
           <td>
@@ -113,9 +113,10 @@ const Home = () => {
         {liveRateData?.map((item, index) => {
           return (
             item.type !== "GOLD OZ" &&
+            item.type !== "GOLD" &&
             item.type !== "TEN TOLA BAR" && (
               <tr key={index}>
-                <td className="head">{item.type}</td>
+                <td className="others">{item.type}</td>
                 <td className={`w-half`}>
                   {item.type == "KILO BAR 995"
                     ? "1KG"
@@ -124,7 +125,7 @@ const Home = () => {
                       : "1GM"}
                 </td>
                 <td className={`w-half ade`}>AED</td>
-                <td>
+                <td className="t-half">
                   <div>
                     <span className={`medium ${item?.ask_buy_color}`}>
                       {item?.ask_buy}
