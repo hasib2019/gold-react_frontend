@@ -73,7 +73,7 @@ const Home = () => {
         </tr>
         <tr>
           <td rowspan="2" className="goldoz">{liveRateData[0]?.type}</td>
-          <td className={`medium ${liveRateData[0]?.bid_sell_color}`}>
+          <td className={`medium ${liveRateData[0]?.bid_sell_color}`} style={{borderRight:"3px solid var(--base-color)"}}>
             {liveRateData[0]?.bid_sell}
           </td>
           <td className={`medium ${liveRateData[0]?.ask_buy_color}`}>
