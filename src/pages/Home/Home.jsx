@@ -71,27 +71,37 @@ const Home = () => {
           <th>$ BID(SELL)</th>
           <th>$ ASK(BUY)</th>
         </tr>
-        <tr>
-          <td rowspan="2" className="goldoz">{liveRateData[0]?.type}</td>
-          <td className={`medium ${liveRateData[0]?.bid_sell_color}`} style={{borderRight:"3px solid var(--base-color)"}}>
-            {liveRateData[0]?.bid_sell}
+        <tr className="goldOz">
+          <td>{liveRateData[0]?.type}</td>
+          <td>
+            <div>
+              <span className={`medium ${liveRateData[0]?.bid_sell_color}`}>
+                {liveRateData[0]?.bid_sell}
+              </span>
+              <div className="font-16 range">
+                <div>
+                  <span className="red">Low : </span> {liveRateData[0]?.low}
+                </div>
+              </div>
+            </div>
           </td>
-          <td className={`medium ${liveRateData[0]?.ask_buy_color}`}>
-            {liveRateData[0]?.ask_buy}
+          <td>
+            <div>
+              <span className={`medium ${liveRateData[0]?.ask_buy_color}`}>
+                {liveRateData[0]?.ask_buy}
+              </span>
+              <div className="font-16 range">
+                <div>
+                  <span className="green">High : </span> {liveRateData[0]?.high}
+                </div>
+              </div>
+            </div>
           </td>
         </tr>
-        <tr className="font-16">
-          <td className="low">
-            <span className="red">Low :</span> {liveRateData[0]?.low}
-          </td>
-          <td className="high">
-            <span className="green">High :</span> {liveRateData[0]?.high}
-          </td>
-        </tr>
-      </table>
-      <table className="table-2">
-        <tr>
-          <td className="tentolabar">{liveRateData[4]?.type}</td>
+      </table> 
+      <table>
+        <tr className="tentolaBar">
+          <td>{liveRateData[4]?.type}</td>
           <td className={`w-half`}>TTB</td>
           <td className={`w-half ade`}>AED</td>
           <td>
@@ -110,13 +120,15 @@ const Home = () => {
             </div>
           </td>
         </tr>
+        </table>
         {liveRateData?.map((item, index) => {
           return (
             item.type !== "GOLD OZ" &&
             item.type !== "GOLD" &&
             item.type !== "TEN TOLA BAR" && (
-              <tr key={index}>
-                <td className="others">{item.type}</td>
+              <table>
+              <tr key={index} className="others">
+                <td>{item.type}</td>
                 <td className={`w-half`}>
                   {item.type == "KILO BAR 995"
                     ? "1KG"
@@ -141,10 +153,11 @@ const Home = () => {
                   </div>
                 </td>
               </tr>
+              </table>
             )
           );
         })}
-      </table>
+      
     </div>
   );
 };

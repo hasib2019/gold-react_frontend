@@ -53,39 +53,40 @@ const HomeLayout = () => {
   }, []);
 
   return (
-    <div style={{ backgroundImage: `url(${bgimage})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    width: '100vw',
-    height: '100vh' }}>
-    
+    <div style={{
+      backgroundColor: '#130909',
+      width: '100vw',
+      height: '100vh'
+    }}>
       <div className="logo">
-      <div>
-      <p className="datetimeuae">UAE: {uaeTime}</p>
-      <p className="datetimeny">NY: {nyTime}</p>
-      </div>
+        <div className="left"><p className="datetimeuae">UAE: {uaeTime}<br />NY: {nyTime}</p></div>
         <Link to="/">
-          <div className="left">
+          <div className="center">
             <img src={HeaderLogo} alt="" />
+            <span>CRYSTAL GOLD</span>
           </div>
         </Link>
 
         <div className="right">
           <div className="menu">
-              <div className="button">
+            <div className="button">
               <Link to="/">
                 <button>Live Rates</button>
               </Link>
-              </div>
+            </div>
           </div>
         </div>
-
-        <Link to="/login">
-          <button onclick=" window.open('/login', '_blank'); return false;">
-            &nbsp; Login
-          </button>
-        </Link>
+        <div className="last">
+          <div className="login">
+            <div className="button">
+              <Link to="/login">
+                <button onclick=" window.open('/login', '_blank'); return false;">
+                  &nbsp; Login
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
       <Suspense fallback={<Loading />}>
         <ToastContainer />
