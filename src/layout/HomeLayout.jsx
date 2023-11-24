@@ -57,17 +57,18 @@ const HomeLayout = () => {
       backgroundColor: '#130909',
       width: '100vw',
       minHeight: '100vh',
-      paddingBottom:'8rem'
+      paddingBottom:'2.5rem'
     }}>
       <div className="logo">
         <div className="left"><p className="datetimeuae">UAE: {uaeTime}<br />NY: {nyTime}</p></div>
-        <Link to="/">
-          <div className="center">
-            <img src={HeaderLogo} alt="" />
+        
+        <div className="center">
+          <Link to="/">
+            <img src={HeaderLogo} alt="" className="imgCenter"/>
             <span>CRYSTAL GOLD</span>
-          </div>
-        </Link>
-
+          </Link>
+        </div>
+        
         <div className="right">
           <div className="menu">
             <div className="button">
@@ -77,6 +78,7 @@ const HomeLayout = () => {
             </div>
           </div>
         </div>
+
         <div className="last">
           <div className="login">
             <div className="button">
@@ -88,6 +90,7 @@ const HomeLayout = () => {
             </div>
           </div>
         </div>
+
       </div>
       <Suspense fallback={<Loading />}>
         <ToastContainer />

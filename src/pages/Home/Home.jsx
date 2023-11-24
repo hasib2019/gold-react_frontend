@@ -71,8 +71,8 @@ const Home = () => {
         <div className="firstDiv3">$ ASK(BUY)</div>
       </div>
       <div className="firstGoldoz">
-        <div className="firstGoldoz1">{liveRateData[0]?.type}</div>
-        <div className="firstGoldoz2"><div>
+        <div className="firstGoldoz1 bg">{liveRateData[0]?.type}</div>
+        <div className="firstGoldoz2 bg"><div>
           <span className={`medium ${liveRateData[0]?.bid_sell_color}`}>
             {liveRateData[0]?.bid_sell}
           </span>
@@ -82,58 +82,25 @@ const Home = () => {
             </div>
           </div>
         </div></div>
-        <div className="firstGoldoz3"><div>
-          <span className={`medium ${liveRateData[0]?.ask_buy_color}`}>
-            {liveRateData[0]?.ask_buy}
-          </span>
-          <div className="font-16 range">
-            <div>
-              <span className="green">High : </span> {liveRateData[0]?.high}
-            </div>
-          </div>
-        </div></div>
-      </div>
-      {/* <table>
-        <tr>
-          <th>PRODUCT</th>
-          <th>$ BID(SELL)</th>
-          <th>$ ASK(BUY)</th>
-        </tr>
-        <tr className="goldOz">
-          <td>{liveRateData[0]?.type}</td>
-          <td>
-            <div>
-              <span className={`medium ${liveRateData[0]?.bid_sell_color}`}>
-                {liveRateData[0]?.bid_sell}
-              </span>
-              <div className="font-16 range">
-                <div>
-                  <span className="red">Low : </span> {liveRateData[0]?.low}
-                </div>
-              </div>
-            </div>
-          </td>
-          <td>
-            <div>
-              <span className={`medium ${liveRateData[0]?.ask_buy_color}`}>
-                {liveRateData[0]?.ask_buy}
-              </span>
-              <div className="font-16 range">
+        <div className="firstGoldoz3 bg">
+          <div>
+            <span className={`medium ${liveRateData[0]?.ask_buy_color}`}>
+              {liveRateData[0]?.ask_buy}
+            </span>
+            <div className="font-16 range">
                 <div>
                   <span className="green">High : </span> {liveRateData[0]?.high}
                 </div>
-              </div>
             </div>
-          </td>
-        </tr>
-      </table>
-      <table>
-        <tr className="tentolaBar">
-          <td>{liveRateData[4]?.type}</td>
-          <td className={`w-half`}>TTB</td>
-          <td className={`w-half ade`}>AED</td>
-          <td>
-            <div>
+          </div>
+        </div>
+      </div>
+      <div className="firstTentola">
+        <div className="firstTentola1">{liveRateData[4]?.type}</div>
+        <div className="firstTentola2 w-half">TTB</div>
+        <div className="firstTentola3 ade">AED</div>
+        <div className="firstTentola4">
+        <div>
               <span className={`medium ${liveRateData[4]?.ask_buy_color}`}>
                 {liveRateData[4]?.ask_buy}
               </span>
@@ -146,46 +113,88 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </td>
-        </tr>
-      </table> */}
-      {liveRateData?.map((item, index) => {
-        return (
-          item.type !== "GOLD OZ" &&
-          item.type !== "GOLD" &&
-          item.type !== "TEN TOLA BAR" && (
-            <table>
-              <tr key={index} className="others">
-                <td>{item.type}</td>
-                <td className={`w-half`}>
-                  {item.type == "KILO BAR 995"
-                    ? "1KG"
-                    : item.type == "KILO BAR 9999"
-                      ? "1KG"
-                      : "1GM"}
-                </td>
-                <td className={`w-half ade`}>AED</td>
-                <td className="t-half">
-                  <div>
-                    <span className={`medium ${item?.ask_buy_color}`}>
-                      {item?.ask_buy}
-                    </span>
-                    <div className="font-16 range">
-                      <div>
-                        <span className="red">L : </span> {item?.low}
-                      </div>
-                      <div>
-                        <span className="green">H : </span> {item?.high}
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
-            </table>
-          )
-        );
-      })}
-
+        </div>
+      </div>
+      <div className="firstTentola">
+        <div className="firstTentola1 bg">{liveRateData[2]?.type}</div>
+        <div className="firstTentola2 bg w-half">1GM</div>
+        <div className="firstTentola3 ade">AED</div>
+        <div className="firstTentola4 bg">
+        <div>
+              <span className={`medium ${liveRateData[2]?.ask_buy_color}`}>
+                {liveRateData[2]?.ask_buy}
+              </span>
+              <div className="font-16 range">
+                <div>
+                  <span className="red">L : </span> {liveRateData[2]?.low}
+                </div>
+                <div>
+                  <span className="green">H : </span> {liveRateData[2]?.high}
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div className="firstTentola">
+        <div className="firstTentola1">{liveRateData[3]?.type}</div>
+        <div className="firstTentola2 w-half">1GM</div>
+        <div className="firstTentola3 ade">AED</div>
+        <div className="firstTentola4">
+        <div>
+              <span className={`medium ${liveRateData[3]?.ask_buy_color}`}>
+                {liveRateData[3]?.ask_buy}
+              </span>
+              <div className="font-16 range">
+                <div>
+                  <span className="red">L : </span> {liveRateData[3]?.low}
+                </div>
+                <div>
+                  <span className="green">H : </span> {liveRateData[3]?.high}
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div className="firstTentola">
+        <div className="firstTentola1 bg">{liveRateData[5]?.type}</div>
+        <div className="firstTentola2 bg w-half">1KG</div>
+        <div className="firstTentola3 ade">AED</div>
+        <div className="firstTentola4 bg">
+        <div>
+              <span className={`medium ${liveRateData[5]?.ask_buy_color}`}>
+                {liveRateData[5]?.ask_buy}
+              </span>
+              <div className="font-16 range">
+                <div>
+                  <span className="red">L : </span> {liveRateData[5]?.low}
+                </div>
+                <div>
+                  <span className="green">H : </span> {liveRateData[5]?.high}
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div className="firstTentola">
+        <div className="firstTentola1">{liveRateData[6]?.type}</div>
+        <div className="firstTentola2 w-half">1KG</div>
+        <div className="firstTentola3 ade">AED</div>
+        <div className="firstTentola4">
+        <div>
+              <span className={`medium ${liveRateData[6]?.ask_buy_color}`}>
+                {liveRateData[6]?.ask_buy}
+              </span>
+              <div className="font-16 range">
+                <div>
+                  <span className="red">L : </span> {liveRateData[6]?.low}
+                </div>
+                <div>
+                  <span className="green">H : </span> {liveRateData[6]?.high}
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
   );
 };
