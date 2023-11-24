@@ -29,7 +29,7 @@ const Historical = () => {
   };
   return (
     <div className="grid xl:grid-cols-1 grid-cols-1 gap-5">
-      <Card title="Hover Table" noborder>
+      <Card title="Historical" noborder>
         <div></div>
         <div className="overflow-x-auto -mx-6">
           <div className="inline-block min-w-full align-middle">

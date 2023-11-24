@@ -60,14 +60,15 @@ const login = () => {
           className="left-column bg-cover bg-no-repeat bg-center "
           style={{
             backgroundImage: `url(${bgImage})`,
+            width: '100vw',
+            height: '100vh'
           }}
         >
           <div className="flex flex-col h-full justify-center">
             <div className="flex-1 flex flex-col justify-center items-center">
-              <Link to="/">
-                {/* <img src={LogoWhite} alt="" className="mb-10" /> */}
+              {/* <Link to="/">
                 <span style={{color: 'gold', fontSize: '30px'}}>Crystal Gold</span>
-              </Link>
+              </Link> */}
             </div>
             {/* <div>
               <div className="black-500-title max-w-[525px] mx-auto pb-20 text-center">
