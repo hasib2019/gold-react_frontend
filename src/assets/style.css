@@ -77,6 +77,8 @@ table {
   border-spacing: 0;
   margin: 0.8rem auto;
   width: 95%;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 /* th, td{ 
@@ -190,6 +192,61 @@ tr:last-child td.high{
   border-top: 3px solid var(--base-color);
   border-left: 3px solid var(--base-color);
 } */
+
+.firstDiv{
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #CBA544;
+  text-align: center;
+  padding:0 30px;
+}
+.firstDiv1{
+  width: 33%;
+  border: solid 3px var(--base-color);
+  border-top-left-radius: 10px;
+}
+.firstDiv2{
+  width: 33%;
+  border-top: solid 3px var(--base-color);
+  border-bottom: solid 3px var(--base-color);
+}
+.firstDiv3{
+  width: 33%;
+  border: solid 3px var(--base-color);
+  border-top-right-radius: 10px;
+}
+
+.firstGoldoz{
+  display: flex;
+  justify-content: center;
+  background: #2A1111;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #CBA544;
+  text-align: center;
+  padding:0 30px;
+}
+.firstGoldoz1{
+  width: 33%;
+  border: solid 3px var(--base-color);
+  border-bottom-left-radius: 10px;
+  border-top: none;
+}
+.firstGoldoz2{
+  width: 33%;
+  border-top: none;
+  border-bottom: solid 3px var(--base-color);
+}
+.firstGoldoz3{
+  width: 33%;
+  border: solid 3px var(--base-color);
+  border-top: none;
+  border-bottom-right-radius: 10px;
+}
 
 .font-16 {
   font-size: 30px;

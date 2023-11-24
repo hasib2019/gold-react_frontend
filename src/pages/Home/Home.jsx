@@ -65,7 +65,35 @@ const Home = () => {
   return (
     <div style={{ paddingBottom: 30 }}>
 
-      <table>
+      <div className="firstDiv">
+        <div className="firstDiv1">PRODUCT</div>
+        <div className="firstDiv2">$ BID(SELL)</div>
+        <div className="firstDiv3">$ ASK(BUY)</div>
+      </div>
+      <div className="firstGoldoz">
+        <div className="firstGoldoz1">{liveRateData[0]?.type}</div>
+        <div className="firstGoldoz2"><div>
+          <span className={`medium ${liveRateData[0]?.bid_sell_color}`}>
+            {liveRateData[0]?.bid_sell}
+          </span>
+          <div className="font-16 range">
+            <div>
+              <span className="red">Low : </span> {liveRateData[0]?.low}
+            </div>
+          </div>
+        </div></div>
+        <div className="firstGoldoz3"><div>
+          <span className={`medium ${liveRateData[0]?.ask_buy_color}`}>
+            {liveRateData[0]?.ask_buy}
+          </span>
+          <div className="font-16 range">
+            <div>
+              <span className="green">High : </span> {liveRateData[0]?.high}
+            </div>
+          </div>
+        </div></div>
+      </div>
+      {/* <table>
         <tr>
           <th>PRODUCT</th>
           <th>$ BID(SELL)</th>
@@ -98,7 +126,7 @@ const Home = () => {
             </div>
           </td>
         </tr>
-      </table> 
+      </table>
       <table>
         <tr className="tentolaBar">
           <td>{liveRateData[4]?.type}</td>
@@ -120,13 +148,13 @@ const Home = () => {
             </div>
           </td>
         </tr>
-        </table>
-        {liveRateData?.map((item, index) => {
-          return (
-            item.type !== "GOLD OZ" &&
-            item.type !== "GOLD" &&
-            item.type !== "TEN TOLA BAR" && (
-              <table>
+      </table> */}
+      {liveRateData?.map((item, index) => {
+        return (
+          item.type !== "GOLD OZ" &&
+          item.type !== "GOLD" &&
+          item.type !== "TEN TOLA BAR" && (
+            <table>
               <tr key={index} className="others">
                 <td>{item.type}</td>
                 <td className={`w-half`}>
@@ -153,11 +181,11 @@ const Home = () => {
                   </div>
                 </td>
               </tr>
-              </table>
-            )
-          );
-        })}
-      
+            </table>
+          )
+        );
+      })}
+
     </div>
   );
 };

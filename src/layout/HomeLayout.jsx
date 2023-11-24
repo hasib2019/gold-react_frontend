@@ -56,7 +56,8 @@ const HomeLayout = () => {
     <div style={{
       backgroundColor: '#130909',
       width: '100vw',
-      height: '100vh'
+      minHeight: '100vh',
+      paddingBottom:'8rem'
     }}>
       <div className="logo">
         <div className="left"><p className="datetimeuae">UAE: {uaeTime}<br />NY: {nyTime}</p></div>
