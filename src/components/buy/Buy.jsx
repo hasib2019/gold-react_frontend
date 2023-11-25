@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "@/components/ui/Card";
-import { newsAlartApi } from "../../../url/ApiList";
+import { buyApi } from "../../../url/ApiList";
 import axios from "axios";
 import Button from "../ui/Button";
 import Textinput from "../ui/Textinput";
@@ -31,7 +31,7 @@ const Buy = () => {
 
   const getbuys = async () => {
     try {
-      const buyData = await axios.get(newsAlartApi, config);
+      const buyData = await axios.get(buyApi, config);
       let data = buyData.data;
       data.sort(function (a, b) {
         return a.id - b.id;
@@ -49,7 +49,7 @@ const Buy = () => {
   const onSubmit = async (e) => {
     setIsLoading(true);
     try {
-      const dataSend = await axios.post(newsAlartApi, value, config);
+      const dataSend = await axios.post(buyApi, value, config);
       toast.success(dataSend.data.message);
       setIsLoading(false);
       setValue({
