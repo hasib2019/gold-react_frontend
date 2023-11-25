@@ -46,7 +46,7 @@ const ShowProduct = () => {
         <Card noborder>
           <div className="overflow-x-auto -mx-6">
             <Button
-              text="Add News"
+              text="Add Product"
               isLoading={isLoading}
               className="m-2 float-right btn-success"
               onClick={() => setAddProduct(false)}

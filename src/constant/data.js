@@ -10,12 +10,12 @@ export const menuItems = [
     link: "dashboard",
   },
   {
-    title: "All Product",
+    title: "Products",
     icon: "heroicons-outline:shopping-cart", 
     link: "dashboard/all-product",
   },
   {
-    title: "Order",
+    title: "Orders",
     icon: "heroicons-outline:shopping-cart", 
     link: "dashboard/order",
   },
@@ -25,7 +25,7 @@ export const menuItems = [
     link: "dashboard/historical-data",
   },
   {
-    title: "Set Alart Data",
+    title: "Set Alert Data",
     icon: "heroicons-outline:shopping-cart", 
     link: "dashboard/set-alart",
   },
@@ -35,9 +35,19 @@ export const menuItems = [
     link: "dashboard/incr-decr",
   },
   {
-    title: "Alart News",
+    title: "News",
     icon: "heroicons-outline:shopping-cart", 
     link: "dashboard/alart-news",
+  },
+  {
+    title: "Buy",
+    icon: "heroicons-outline:shopping-cart", 
+    link: "dashboard/buy",
+  },
+  {
+    title: "Sell",
+    icon: "heroicons-outline:shopping-cart", 
+    link: "dashboard/sell",
   },
   // {
   //   title: "Multi Level",

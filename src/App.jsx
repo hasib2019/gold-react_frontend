@@ -17,6 +17,8 @@ const AlartNews = lazy(() => import("./pages/alart-news/index"));
 const Home = lazy(() => import("./pages/Home/Home"));
 const PrivacyPolicy = lazy(() => import("./pages/privacy-policy/Index"));
 const Support = lazy(() => import("./pages/support/Index"));
+const Buy = lazy(() => import("./pages/buy/Index"));
+const Sell = lazy(() => import("./pages/sell/Index"));
 
 import AuthLayout from "./layout/AuthLayout";
 import Layout from "./layout/Layout";
@@ -42,13 +44,12 @@ function App() {
           <Route path="dashboard/profile" element={<Profile />} />
           <Route path="dashboard/all-product" element={<AllProduct />} />
           <Route path="dashboard/order" element={<OrderShow />} />
-          <Route
-            path="dashboard/historical-data"
-            element={<HistoricalData />}
-          />
+          <Route path="dashboard/historical-data" element={<HistoricalData />}/>
           <Route path="dashboard/set-alart" element={<ShowSetAlartData />} />
           <Route path="dashboard/incr-decr" element={<IncrDecr />} />
           <Route path="dashboard/alart-news" element={<AlartNews />} />
+          <Route path="dashboard/buy" element={<Buy />} />
+          <Route path="dashboard/sell" element={<Sell />} />
         </Route>
       </Routes>
     </main>
