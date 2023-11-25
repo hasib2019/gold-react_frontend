@@ -1,5 +1,5 @@
-// const liveIp = 'http://localhost:8000/api/';
-const liveIp = 'https://www.gold.crystalgolds.com/api/';
+const liveIp = 'http://localhost:8000/api/';
+// const liveIp = 'https://www.gold.crystalgolds.com/api/';
 
 export const loginApi = liveIp + 'login';
 export const registerApi = liveIp + 'users';
@@ -13,4 +13,6 @@ export const inceDecrUpdateApi = liveIp + 'incr-decr-update';
 export const newsAlartApi = liveIp + 'news-alart';
 export const meApi = liveIp + 'me';
 export const liveRateApi = liveIp + 'gold-price-crystal-jewelary';
-export const supportApi = liveIp + 'support';
+export const supportApi = liveIp + 'supports';
+export const buyApi = liveIp + 'buys';
+export const sellApi = liveIp + 'sells';
