@@ -1,63 +1,44 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "@/assets/style.css";
 import Button from "../../components/ui/Button";
 import Textinput from "../../components/ui/Textinput";
 import Textarea from "../../components/ui/Textarea";
 import { supportApi } from "../../../url/ApiList";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const Index = () => {
-  const [support, setSupport] = useState([]);
+  const token =
+  typeof window !== "undefined"
+    ? JSON.parse(localStorage.getItem("token"))
+    : null;
+const config = {
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+};
   const [isLoading, setIsLoading] = useState(false);
-  const [addSupport, setAddSupport] = useState(true);
   const [value, setValue] = useState({
-    fName: "",
+    name: "",
     email: "",
     description: "",
   });
-
-  useEffect(() => {
-    getSupport();
-  }, []);
-
-  const getSupport = async () => {
-    try {
-      const supportData = await axios.get(supportApi, config);
-      let data = supportData.data;
-      data.sort(function (a, b) {
-        return a.id - b.id;
-      });
-      setSupport(data);
-    } catch (error) {
-      // console.log({ error });
-    }
-  };
 
   const handleChange = (e, data) => {
     setValue({ ...value, [data]: e.target.value });
   };
 
-  const token =
-    typeof window !== "undefined"
-      ? JSON.parse(localStorage.getItem("token"))
-      : null;
-  const config = {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  };
-
   const onSubmit = async (e) => {
     setIsLoading(true);
     try {
-      const dataSend = await axios.post(supportApi, value, config);
-      toast.success(dataSend.data.message);
+      await axios.post(supportApi, value, config);
       setIsLoading(false);
       setValue({
-        fName: "",
+        name: "",
         email: "",
         description: "",
       });
-      setAddSupport(true);
+      toast.success("Support Added Successfully");
     } catch (error) {
       toast.error(error.response.data.message);
       setIsLoading(false);
@@ -158,8 +139,8 @@ const Index = () => {
                     label="Full Name"
                     type="text"
                     placeholder="Your Full Name..."
-                    onChange={(e) => handleChange(e, "fName")}
-                    defaultValue={value.fName}
+                    onChange={(e) => handleChange(e, "name")}
+                    value={value.name}
                   />
                   <br />
                   <Textinput
@@ -167,7 +148,7 @@ const Index = () => {
                     type="text"
                     placeholder="Your Email..."
                     onChange={(e) => handleChange(e, "email")}
-                    defaultValue={value.email}
+                    value={value.email}
                   />
                   <br />
                   <Textarea
@@ -175,7 +156,7 @@ const Index = () => {
                     type="text"
                     placeholder="Support Description..."
                     onChange={(e) => handleChange(e, "description")}
-                    defaultValue={value.description}
+                    value={value.description}
                   />
                   <br />
                   <Button
