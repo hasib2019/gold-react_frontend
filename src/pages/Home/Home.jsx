@@ -76,7 +76,7 @@ const Home = () => {
           <span className={`medium ${liveRateData[0]?.bid_sell_color}`}>
             {liveRateData[0]?.bid_sell}
           </span>
-          <div className="font-16 range">
+          <div className="font-16">
             <div>
               <span className="red">Low : </span> {liveRateData[0]?.low}
             </div>
@@ -87,7 +87,7 @@ const Home = () => {
             <span className={`medium ${liveRateData[0]?.ask_buy_color}`}>
               {liveRateData[0]?.ask_buy}
             </span>
-            <div className="font-16 range">
+            <div className="font-16">
                 <div>
                   <span className="green">High : </span> {liveRateData[0]?.high}
                 </div>
