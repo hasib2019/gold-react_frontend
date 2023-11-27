@@ -49,6 +49,11 @@ export const menuItems = [
     icon: "heroicons-outline:shopping-cart", 
     link: "dashboard/sell",
   },
+  {
+    title: "Support History",
+    icon: "heroicons-outline:shopping-cart", 
+    link: "dashboard/support",
+  },
   // {
   //   title: "Multi Level",
   //   icon: "heroicons:share",

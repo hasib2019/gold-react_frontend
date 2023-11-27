@@ -17,8 +17,9 @@ const AlartNews = lazy(() => import("./pages/alart-news/index"));
 const Home = lazy(() => import("./pages/Home/Home"));
 const PrivacyPolicy = lazy(() => import("./pages/privacy-policy/Index"));
 const Support = lazy(() => import("./pages/support/Index"));
-const Buy = lazy(() => import("./pages/buy/Index"));
-const Sell = lazy(() => import("./pages/sell/Index"));
+const Buy = lazy(() => import("./pages/buy/index"));
+const Sell = lazy(() => import("./pages/sell/index"));
+const SupportView = lazy(() => import("./pages/support/View"));
 
 import AuthLayout from "./layout/AuthLayout";
 import Layout from "./layout/Layout";
@@ -50,6 +51,7 @@ function App() {
           <Route path="dashboard/alart-news" element={<AlartNews />} />
           <Route path="dashboard/buy" element={<Buy />} />
           <Route path="dashboard/sell" element={<Sell />} />
+          <Route path="dashboard/support" element={<SupportView />} />
         </Route>
       </Routes>
     </main>

@@ -4,9 +4,6 @@ import { ToastContainer } from "react-toastify";
 import Loading from "@/components/Loading";
 import HeaderLogo from "@/assets/images/Crystal.png";
 import { Link } from "react-router-dom";
-import phonePng from "@/assets/images/phone.png";
-import whatsappPng from "@/assets/images/whatsapp.png";
-import bgimage from "@/assets/images/BG_pic.jpg";
 import "@/assets/style.css";
 
 const HomeLayout = () => {
