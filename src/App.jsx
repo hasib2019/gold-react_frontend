@@ -17,8 +17,8 @@ const AlartNews = lazy(() => import("./pages/alart-news/index"));
 const Home = lazy(() => import("./pages/Home/Home"));
 const PrivacyPolicy = lazy(() => import("./pages/privacy-policy/Index"));
 const Support = lazy(() => import("./pages/support/Index"));
-const Buy = lazy(() => import("./pages/buy/Index"));
-const Sell = lazy(() => import("./pages/sell/Index"));
+const Buy = lazy(() => import("./pages/buy/index"));
+const Sell = lazy(() => import("./pages/sell/index"));
 const SupportView = lazy(() => import("./pages/support/View"));
 
 import AuthLayout from "./layout/AuthLayout";
