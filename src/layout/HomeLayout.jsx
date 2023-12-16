@@ -95,7 +95,8 @@ const HomeLayout = () => {
       </Suspense>
       <div className="footer">
         <div className="left">
-          Developed By: <a href="https://creativeitbari.com">Creative IT Bari</a>{" "}
+          Developed By: <a href="https://creativeitbari.com">Creative IT Bari</a>{" "}<br/>
+          <a href="https://crystalgolddubai.com/support">Support</a> | <a href="https://crystalgolddubai.com/privacy-policy">Privacy-Policy</a>
         </div>
         <div className="right">
           <marquee direction="left" scrollamount="3">
