@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 :root {
-  --base-color: #D6B229;
+  --base-color: #fbe17c;
 }
 body {
   margin: 0;
@@ -15,21 +15,25 @@ body {
   display: flex;
   align-items: center;
 }
+
 .left {
   width: 40%;
   flex-direction: column;
   align-items: center;
 }
+
 .center {
   width: 25%;
   text-align: center;
 }
+
 .imgCenter{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
 }
+
 .right {
   width: 20%;
   text-align: center;
@@ -94,17 +98,17 @@ body {
 }
 .firstDiv1{
   width: 33%;
-  border: solid 3px var(--base-color);
+  border: solid 1px var(--base-color);
   border-top-left-radius: 10px;
 }
 .firstDiv2{
   width: 33%;
-  border-top: solid 3px var(--base-color);
-  border-bottom: solid 3px var(--base-color);
+  border-top: solid 1px var(--base-color);
+  border-bottom: solid 1px var(--base-color);
 }
 .firstDiv3{
   width: 33%;
-  border: solid 3px var(--base-color);
+  border: solid 1px var(--base-color);
   border-top-right-radius: 10px;
 }
 
@@ -118,7 +122,7 @@ body {
 }
 .firstGoldoz1{
   width: 33%;
-  border: solid 3px var(--base-color);
+  border: solid 1px var(--base-color);
   border-bottom-left-radius: 10px;
   border-top: none;
   font-size: 3rem;
@@ -129,11 +133,11 @@ body {
 .firstGoldoz2{
   width: 33%;
   border-top: none;
-  border-bottom: solid 3px var(--base-color);
+  border-bottom: solid 1px var(--base-color);
 }
 .firstGoldoz3{
   width: 33%;
-  border: solid 3px var(--base-color);
+  border: solid 1px var(--base-color);
   border-top: none;
   border-bottom-right-radius: 10px;
 }
@@ -149,7 +153,7 @@ body {
 }
 .firstTentola1{
   width: 33%;
-  border: solid 3px var(--base-color);
+  border: solid 1px var(--base-color);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   font-size: 3rem;
@@ -159,22 +163,22 @@ body {
 }
 .firstTentola2{
   width: 18%;
-  border-top: solid 3px var(--base-color);
-  border-right: solid 3px var(--base-color);
-  border-bottom: solid 3px var(--base-color);
+  border-top: solid 1px var(--base-color);
+  border-right: solid 1px var(--base-color);
+  border-bottom: solid 1px var(--base-color);
   display: grid;
   align-items: center;
 }
 .firstTentola3{
   width: 15%;
-  border-top: solid 3px var(--base-color);
-  border-bottom: solid 3px var(--base-color);
+  border-top: solid 1px var(--base-color);
+  border-bottom: solid 1px var(--base-color);
   display: grid;
   align-items: center;
 }
 .firstTentola4{
   width: 33%;
-  border: solid 3px var(--base-color);
+  border: solid 1px var(--base-color);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -232,7 +236,7 @@ body {
 
 .footer .left {
   margin-right: 5px;
-  width: 30%;
+  width: 20%;
   text-align: left;
   font-size: 1rem;
   color: #8B5C24;
@@ -240,9 +244,10 @@ body {
 }
 
 .footer .right {
-  width: 70%;
+  width: 80%;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  margin-right: 20px;
 }
 
 .terms {

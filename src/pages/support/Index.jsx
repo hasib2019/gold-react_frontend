@@ -106,7 +106,7 @@ const config = {
                     />
                   </svg>
                   <div class="ml-4 text-md tracking-wide font-semibold w-40">
-                    +971 54 217 2624 +971 54 217 2625 +88 01829 041699
+                    +971 50 7708332 +971 54 217 2624 +971 54 217 2625 +88 01829 041699
                   </div>
                 </div>
 
@@ -128,7 +128,8 @@ const config = {
                     />
                   </svg>
                   <div class="ml-4 text-md tracking-wide font-semibold w-40">
-                    info@crystalgolds.com
+                    crsytalgolddubai@gmail.com
+                    crystaligt@crystalgolddubai.com
                   </div>
                 </div>
               </div>

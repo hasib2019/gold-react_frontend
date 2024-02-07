@@ -62,7 +62,7 @@ const HomeLayout = () => {
         <div className="center">
           <Link to="/">
             <img src={HeaderLogo} alt="" className="imgCenter"/>
-            <span>CRYSTAL GOLD</span>
+            <span>Crystal Gold</span>
           </Link>
         </div>
         
@@ -87,7 +87,6 @@ const HomeLayout = () => {
             </div>
           </div>
         </div>
-
       </div>
       <Suspense fallback={<Loading />}>
         <ToastContainer />
@@ -100,7 +99,7 @@ const HomeLayout = () => {
         </div>
         <div className="right">
           <marquee direction="left" scrollamount="3">
-            Welcome to Crystal Gold, +971 54 217 2625 (whatsapp), +971 54 217
+            Welcome to Crystal International General Trading LLC, <br/> +971 50 770 8332, +971 54 217 2625 (whatsapp), +971 54 217
             2624 (Phone).
           </marquee>
         </div>
