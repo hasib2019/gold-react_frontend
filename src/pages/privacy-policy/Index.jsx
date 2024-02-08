@@ -6,7 +6,7 @@ const Index = () => {
     <div className="terms">
       <div className="firstPara">
         <h3>Privacy Policy for Crystal Gold</h3>
-        <p>At Crystal Gold, accessible from http://crystalgolddubai.com/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Crystal Gold and how we use it.</p>
+        <p>At Crystal Gold, accessible from https://crystalgolddubai.com/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Crystal Gold and how we use it.</p>
         <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
         <p>This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in Crystal Gold. This policy is not applicable to any information collected offline or via channels other than this website.</p>
         <h3>Consent</h3>
