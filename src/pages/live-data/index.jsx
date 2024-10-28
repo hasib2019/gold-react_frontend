@@ -3,7 +3,7 @@ import "@/assets/style.css";
 import axios from "axios";
 import { liveRateApi } from "../../../url/ApiList";
 
-const Home = () => {
+const index = () => {
   const [liveRateData, setLiveRateData] = useState([]);
   const [previousLiveRateData, setPreviousLiveRateData] = useState([]);
 
@@ -63,8 +63,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div style={{ paddingBottom: 30 }}>
-
+    
+    <div style={{ padding: '40px 30px 90px 30px' }}>
       <div className="firstDiv">
         <div className="firstDiv1">PRODUCT</div>
         <div className="firstDiv2">$ BID(SELL)</div>
@@ -199,4 +199,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default index;

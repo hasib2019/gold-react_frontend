@@ -7,7 +7,7 @@ import { supportApi } from "../../../url/ApiList";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const Index = () => {
+const index = () => {
   const token =
   typeof window !== "undefined"
     ? JSON.parse(localStorage.getItem("token"))
@@ -46,134 +46,76 @@ const config = {
   };
 
   return (
-    <div className="terms">
-      <div class="relative flex items-top justify-center min-h-screen dark:bg-gray-900">
-        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-          <div class="overflow-hidden">
-            <div class="grid grid-cols-1 md:grid-cols-2">
-              <div class="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
-                <h1 class="text-4xl sm:text-5xl text-gray-800 dark:text-white font-extrabold tracking-tight">
-                  Get in touch
-                </h1>
-                <p class="text-normal text-lg sm:text-2xl font-medium text-gray-600 dark:text-gray-400 mt-2">
-                  Fill in the form to start a conversation
-                </p>
+  <div className="support">
+  <div class="flex flex-col md:flex-row bg-gray-100 p-8 md:p-16">
+  <div class="bg-green-500 p-8 md:w-1/2 rounded-lg shadow-md">
+    <img src="/public/cg1.png" />
+    <h2 class="text-3xl font-bold mt-2 mb-4">Get in touch</h2>
+    <address class="not-italic mb-6">
+    <div class="mt-8 space-y-4 text-white">
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-phone-alt text-white"></i>
+      <span>04 264 8866 (Office)</span>
+    </div>
+    
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-mobile-alt text-white"></i>
+      <span>+971 54 217 2625</span>
+    </div>
 
-                <div class="flex items-center mt-8 text-gray-600 dark:text-gray-400">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    viewBox="0 0 24 24"
-                    class="w-8 h-8 text-gray-500"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                  <div class="ml-4 text-md tracking-wide font-semibold w-40">
-                    New GOLD SOQUE, AL DHAGAYA, DEIRA, DUBAI(UNITED ARAB
-                    EMIRATES)
-                  </div>
-                </div>
+    <div class="flex items-center space-x-2">
+      <i class="fab fa-whatsapp text-white"></i>
+      <span>+971 54 217 2613</span>
+    </div>
 
-                <div class="flex items-center mt-4 text-gray-600 dark:text-gray-400">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    viewBox="0 0 24 24"
-                    class="w-8 h-8 text-gray-500"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                  <div class="ml-4 text-md tracking-wide font-semibold w-40">
-                    +971 50 7708332 +971 54 217 2624 +971 54 217 2625 +88 01829 041699
-                  </div>
-                </div>
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-envelope text-white"></i>
+      <span class="text-white">crystalgolddubai@gmail.com</span>
+    </div>
 
-                <div class="flex items-center mt-2 text-gray-600 dark:text-gray-400">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    viewBox="0 0 24 24"
-                    class="w-8 h-8 text-gray-500"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <div class="ml-4 text-md tracking-wide font-semibold w-40">
-                    crsytalgolddubai@gmail.com
-                    crystaligt@crystalgolddubai.com
-                  </div>
-                </div>
-              </div>
+    <div class="flex items-center space-x-2">
+      <i class="fas fa-globe text-white"></i>
+      <span>www.crystalgolddubai.com</span>
+    </div>
 
-              <div class="p-6 flex flex-col justify-center">
-                <div class="flex flex-col">
-                  <Textinput
-                    label="Full Name"
-                    type="text"
-                    placeholder="Your Full Name..."
-                    onChange={(e) => handleChange(e, "name")}
-                    value={value.name}
-                  />
-                  <br />
-                  <Textinput
-                    label="Email"
-                    type="text"
-                    placeholder="Your Email..."
-                    onChange={(e) => handleChange(e, "email")}
-                    value={value.email}
-                  />
-                  <br />
-                  <Textarea
-                    label="Support"
-                    type="text"
-                    placeholder="Support Description..."
-                    onChange={(e) => handleChange(e, "description")}
-                    value={value.description}
-                  />
-                  <br />
-                  <Button
-                    text="Submit"
-                    className="btn-success"
-                    onClick={(e) => onSubmit()}
-                    isLoading={isLoading}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="flex items-start space-x-2">
+      <i class="fas fa-map-marker-alt text-white"></i>
+      <span>
+        A R Mohammad Noor's Building, F3-F4, 1st Floor, Gold Souq Al Dhagaya, Deira, Dubai, UAE
+      </span>
+    </div>
+  </div>
+    </address>
+  </div>
+  
+  <div class="md:w-1/2 md:ml-8 mt-8 md:mt-0">
+    
+    <form class="bg-white p-8 rounded-lg shadow-md space-y-6">
+    <h3 class="text-2xl font-bold text-yellow-500 mb-4">Fill in the form to start a query</h3>
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+        <input id="name" name="name" type="text" placeholder="Your Full Name..." class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
       </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input id="email" name="email" type="email" placeholder="Your Email..." class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500" />
+      </div>
+
+      <div>
+        <label for="support" class="block text-sm font-medium text-gray-700">Support</label>
+        <textarea id="support" name="support" rows="4" placeholder="Support Description..." class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+      </div>
+
+      <div>
+        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 rounded-md shadow-md hover:bg-blue-700">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
     </div>
   );
 };
 
-export default Index;
+export default index;

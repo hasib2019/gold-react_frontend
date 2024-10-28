@@ -1,82 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"); */
+
 :root {
   --base-color: #fbe17c;
 }
 body {
   margin: 0;
-  background-color: black;
-  font-family: "Poppins", sans-serif;
   min-height: 100vh;
   position: relative;
-}
-
-.logo {
-  padding: 0.5rem 5rem 0 3rem;
-  display: flex;
-  align-items: center;
-}
-
-.left {
-  width: 40%;
-  flex-direction: column;
-  align-items: center;
-}
-
-.center {
-  width: 25%;
-  text-align: center;
-}
-
-.imgCenter{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-
-.right {
-  width: 20%;
-  text-align: center;
-}
-.last {
-  width: 15%;
-  text-align: right;
-}
-
-.datetimeuae{
-  color:#FFF;
-  font-size: 25px;
-  font-weight: 500;
-}
-
-.center img {
-  width: 120px;
-}
-.logo .center span {
-  color: #D6B229;
-  font-size: 2.8rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.right .menu button {
-  border: 0;
-  border-radius: 50px;
-  padding: 1rem 2rem;
-  background-color: #FFF;
-  font-weight: 600;
-  color: #15B24B;
-  font-size: 2rem;
-}
-
-.last .login button {
-  border: 1px solid #D6B229;
-  border-radius: 50px;
-  padding: .6rem 2rem;
-  background-color: #2A1111;
-  font-weight: 600;
-  color: #FFF;
-  font-size: 1.2rem;
 }
 
 .red {
@@ -89,7 +19,7 @@ body {
 .firstDiv{
   display: flex;
   justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   font-size: 2.5rem;
   font-weight: 600;
   color: #CBA544;
@@ -111,11 +41,10 @@ body {
   border: solid 1px var(--base-color);
   border-top-right-radius: 10px;
 }
-
 .firstGoldoz{
   display: flex;
   justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   color: #CBA544;
   text-align: center;
   padding:0 4rem 0 1.8rem;
@@ -141,11 +70,10 @@ body {
   border-top: none;
   border-bottom-right-radius: 10px;
 }
-
 .firstTentola{
   display: flex;
   justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
   color: #CBA544;
   text-align: center;
   padding:0 4rem 0 1.8rem;
@@ -222,55 +150,151 @@ body {
   font-weight: 700;
 }
 
+@media screen and (max-width: 768px) {
+  .firstDiv, .firstGoldoz, .firstTentola {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .firstDiv1, .firstDiv2, .firstDiv3, 
+  .firstGoldoz1, .firstGoldoz2, .firstGoldoz3,
+  .firstTentola1, .firstTentola2, .firstTentola3, .firstTentola4 {
+    width: 100%; /* Full width for small screens */
+    font-size: 4vw; /* Larger text for small screens */
+  }
+
+  .range {
+    font-size: 2.5vw; /* Increase range text size */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .firstDiv, .firstGoldoz, .firstTentola {
+    padding: 0 0.5rem;
+  }
+
+  .firstDiv1, .firstDiv2, .firstDiv3, 
+  .firstGoldoz1, .firstGoldoz2, .firstGoldoz3,
+  .firstTentola1, .firstTentola2, .firstTentola3, .firstTentola4 {
+    font-size: 5vw; /* Larger font size for very small screens */
+  }
+
+  .range {
+    font-size: 3.5vw; /* Adjust for very small screens */
+  }
+}
+
+.about {
+  width: 100%;
+  background-color: #FFF;
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  padding: 30px;
+}
+.about h5 {
+  text-align: center;
+  font-size: 18px;
+  line-height: 2.5rem;
+}
+.about p {
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.8rem;
+  padding: 10px;
+}
+.about .firstPara{
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.about h3{
+  color: var(--base-color);
+  padding: 15px 0px;
+}
+.about ul{
+  padding-left: 50px;
+}
+
+.products{
+  width: 100%;
+  background-color: #ececec;
+  padding: 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+.services{
+  width: 100%;
+  background-color: #FFF;
+  padding-bottom: 30px;
+  font-family: "Raleway", sans-serif;
+}
+
+.gallery{
+  width: 100%;
+  background-color: #ececec;
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 60px;
+}
+
+.support{
+  width: 100%;
+  background-color: #FFF;
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  padding-top: 20px;
+}
+
+.privacy{
+  width: 100%;
+  background-color: #FFF;
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  padding: 30px 40px 75px 40px;
+}
+
+.privacy h5{
+  font-size: 20px;
+  padding-bottom: 5px;
+  color: gold;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+}
+
+.privacy p{
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.4rem;
+  padding-bottom: 8px;
+  font-family: "Raleway", sans-serif;
+}
+
+.privacy li{
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.4rem;
+  padding-bottom: 8px;
+  font-family: "Raleway", sans-serif;
+}
+
 .footer {
-  background-color: #363535;
+  background-color: #c59a39;
   padding: 8px 0;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  color: white;
+  color: black;
   text-align: center;
   display: flex;
   }
 
 .footer .left {
   margin-right: 5px;
-  width: 20%;
+  width: 60%;
   text-align: left;
-  font-size: 1rem;
-  color: #8B5C24;
+  font-size: .75rem;
   padding-left: 20px;
 }
-
 .footer .right {
-  width: 80%;
-  color: #fff;
-  font-size: 1rem;
-  margin-right: 20px;
-}
-
-.terms {
-  margin: 0.8rem auto;
-  width: 90%;
-  color: #fff;
-  padding-bottom: 50px;
-}
-.terms p {
-  text-align: justify;
-  font-size: 14px;
-  line-height: 1.8rem;
-}
-.terms .firstPara{
-  font-size: 20px;
-  font-weight: 700;
-  padding-bottom: 10px;
-}
-.terms h3{
-  color: var(--base-color);
-  padding: 15px 0px;
-}
-.terms ul{
-  padding-left: 50px;
+  width: 40%;
 }
 
