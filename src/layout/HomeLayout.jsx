@@ -159,7 +159,7 @@ const HomeLayout = () => {
     {/* Left Section: Copyright, Support, Privacy */}
     <div className="text-center md:text-left space-y-2 md:space-y-0">
       <p class="text-black-900">COPYRIGHT ©2024 CRYSTAL INTERNATIONAL GENERAL TRADING LLC. ALL RIGHTS RESERVED</p>
-      <p class="text-green-400">POWERED BY Creative IT Bari</p>
+      <p class="text-green-400">POWERED BY <a href="https://creativeitbari.com" style={{color: 'blue'}}>Creative IT Bari</a></p>
       <p class="text-black-900">
       <Link to="/support">Support</Link> | <Link to="/privacy-policy">Privacy Policy</Link>
       </p>
